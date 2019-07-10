@@ -702,9 +702,9 @@ function! patchreview#extract_diffs(lines, default_strip_count)            "{{{
         let g:patches['patch'] += [l:this_patch]
         unlet! l:this_patch
         call s:me.progress('Collected  ' . l:filepath)
-        if l:p_type == '!'
+        "if l:p_type == '!'
           call s:guess_prefix_strip_value(l:filepath, a:default_strip_count)
-        endif
+        "endif
         let l:line_num -= 1
         call s:state('START')
         continue
